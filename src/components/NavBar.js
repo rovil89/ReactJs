@@ -23,8 +23,9 @@ return (
                         
                     </ul>
                 </div>
+                <CartWidget/>
             </div>
-            <CartWidget/>
+            
         </nav>
     </div>
 );
