@@ -1,5 +1,6 @@
 import { useState } from "react";
 import App from "../App.css";
+import ItemList from "./ItemList";
 
 const productos =[
     {
@@ -7,7 +8,7 @@ const productos =[
     name:"Jamon Crudo y Rucula",
     description: "Pizza con Jamón Crudo y Rúcula",
     stock: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqzRsQYReSkkNb__G7kUYzWLTOGdOeoPL6oQ&usqp=CAU",
+    img: "https://www.recetasnatura.com.ar/sites/default/files/styles/receta_cuerpo/public/pizza-de-jamon-crudo-rucula-y-tomates-secos.jpg?itok=jdGKX1y9",
 },
 {
     id:"2",
@@ -33,18 +34,11 @@ const ItemListContainer =({greeting}) => {
     },2000)
     );
     
-    productList.then((data)=>console.log({data}));
+    productList.then((data)=>setProducts(data));
 
     return(
         <div>
-            <ul >
-                {productos.map((product)=>(
-                    <div>
-                        <li>{product.name}</li>
-                        <img src={product.img} className="w-40 h-40" />
-                    </div>
-                ))}
-            </ul>
+            <ItemList products={products} />  
         </div>
     );
 };
