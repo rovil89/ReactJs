@@ -7,21 +7,21 @@ const itemMock =[
     name:"Jamon Crudo y Rucula",
     description: "Pizza con Jamón Crudo y Rúcula",
     stock: 10,
-    img: process.env.PUBLIC_URL + "/images/RucuCrudo.jpeg",
+    photo: process.env.PUBLIC_URL + "/images/RucuCrudo.jpeg",
 },
 {
     id:"2",
     name:"Provolone",
     description: "Pizza con Queso Provolone",
     stock: 15,
-    img:process.env.PUBLIC_URL + "/images/Provolone.jpeg",
+    photo:process.env.PUBLIC_URL + "/images/Provolone.jpeg",
 },
 {
     id:"3",
     name:"Muzzarella",
     description: "Pizza con Queso Muzzarella",
     stock: 20,
-    img: process.env.PUBLIC_URL + "/images/Muzza.jpeg",
+    photo: process.env.PUBLIC_URL + "/images/Muzza.jpeg",
 },
 ];
 const ItemDetailContainer =() => {

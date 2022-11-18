@@ -3,7 +3,7 @@ const ItemDetail = ({ item }) =>{
     return (
         <div>
             <div>{item.name}</div>
-            <div>{item.img}</div>
+            <img src= {item.photo} alt="" />
         </div>
     );
 };
