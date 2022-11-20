@@ -1,16 +1,23 @@
 .pizza{
-    padding: 0%;
-    width: 250px;
+    padding: 10px;
     height: 25%;
-    margin: 15%;
+    width: 30%;
+    margin: 10px;
     align-items: center;
     justify-content: center;
 }
 img{
+    padding: 10px;
     width: 350px;
-    height: 300px;
+    height: 400px;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.nombre{
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
 }
 ul{
     list-style-type: none;

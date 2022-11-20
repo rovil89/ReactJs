@@ -1,17 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+
+import ItemListContainer from "./components/ItemListContainer";
 import NavBar from './components/NavBar';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import logo from './logo.svg';
+import {Layout} from "./components/Layout"
 
 function App() {
   return (
-    <div className="App">
-      <main >
-        <NavBar />
-        {/*<ItemListContainer greeting={"Hola Mundo, Somos Pacifica"}/>*/}
-        <ItemDetailContainer />
-      </main>
-    </div>
+      <Layout >
+        <ItemListContainer />
+      </Layout>
+    
   );
 }
 

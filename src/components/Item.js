@@ -1,8 +1,9 @@
+import "./cards.css"
 const Item = ({ product }) => {
     return (
-    <div>
-        <img src={product.img} className="w-20 h-20" alt="Product" />
-        <li>{product.name}</li>
+    <div className="pizza">
+        <li className="nombre">{product.name}</li>
+        <img src={product.img} />
     </div>
     );
 };

@@ -1,6 +1,7 @@
+import {Link} from "react-router-dom";
 import CartWidget from "./CartWidget";
 
-const NavBar = () => {
+const NavBarComponent = () => {
 return (
     <div>
         <nav class="navbar navbar-expand-lg bg-light">
@@ -32,4 +33,4 @@ return (
 
 };
 
-export default NavBar;
+export default NavBarComponent;
