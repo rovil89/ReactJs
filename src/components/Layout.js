@@ -2,9 +2,9 @@ import NavBar from "./NavBar";
 
 export const Layout =({ children })=> {
     return (
-        <div>
+        <main className="">
             <NavBar />
             {children}
-        </div>
+        </main>
     );
 };

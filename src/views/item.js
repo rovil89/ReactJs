@@ -3,7 +3,7 @@ import ItemDetailContainer from '../components/ItemDetailContainer';
 const ItemView =() =>{
     return (
         <Layout>
-         <ItemDetailContainer />
+            <ItemDetailContainer />
         </Layout>
     );
 };
