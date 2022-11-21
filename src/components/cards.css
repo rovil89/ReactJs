@@ -18,7 +18,21 @@ img{
     display: flex;
     justify-content: center;
     font-size: x-large;
+    color: aliceblue;
+}
+p{
+    color: white;
 }
 ul{
     list-style-type: none;
+}
+body{
+    background-image: url(../assets/img/leña\ al\ fuego\ completa.jpg);
+    
+    background-attachment: fixed;
+}
+.carrito {
+border: none;
+background-color: aqua;
+padding: 0%;
 }

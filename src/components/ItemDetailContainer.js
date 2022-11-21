@@ -13,7 +13,7 @@ useEffect(() => {
 }, []);
 
 if (!item) {
-    return <p>Loading...</p>;
+    return <p>Loading...</p>
 }
 
 return <ItemDetail item={item} />;
