@@ -19,9 +19,18 @@ img{
     justify-content: center;
     font-size: x-large;
     color: aliceblue;
+    
 }
 p{
     color: white;
+    
+}
+.descripcion{
+    color: antiquewhite;
+    font-weight: 10px;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
 }
 ul{
     list-style-type: none;
@@ -36,9 +45,19 @@ border: none;
 background-color: aqua;
 padding: 5px;
 }
+
 .cardProductContainer{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+.boton{
+    margin: 25px;
+    margin-left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 .navbarCont{
     position: sticky;
