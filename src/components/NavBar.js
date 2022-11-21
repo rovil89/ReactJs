@@ -3,7 +3,7 @@ import CartWidget from "./CartWidget";
 
 const NavBarComponent = () => {
 return (
-    <div>
+    <div className="navbarCont">
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
                 <h1 class="navbar-brand" to="#">Somos Pacifica</h1>
@@ -26,8 +26,9 @@ return (
                 </div>
                 <CartWidget/>
             </div>
-            
         </nav>
+        
+
     </div>
 );
 
