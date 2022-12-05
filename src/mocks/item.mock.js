@@ -14,6 +14,7 @@ export const item = [
     category: "gourmetconjamon",
     description: "Jamón Crudo, Salsa de Tomate, Muzzarella y Rúcula",
     stock: 10,
+    price: 1000,
     img: Crudo,
 },
 {
@@ -22,6 +23,7 @@ export const item = [
     category: "gourmet",
     description: "Queso Provolone, salsa de tomate, oregano, y aceitunas.",
     stock: 15,
+    price: 900,
     img: Provolone,
     
 },
@@ -31,6 +33,7 @@ export const item = [
     category: "gourmet",
     description: "Muzzarella, salsa de tomate, pesto, y aceitunas.",
     stock: 20,
+    price: 800,
     img: Muzza,
 },
 {
@@ -39,6 +42,7 @@ export const item = [
     category: "gourmet",
     description: "Muzzarella, Roquefort, Provolone y Queso Crema",
     stock: 20,
+    price: 1000,
     img: CuatroKe,
 },
 {
@@ -47,6 +51,7 @@ export const item = [
     category: "gourmetconjamon",
     description: "Muzzarella, Jamon Cocido, Salsa de Tomate y Morron",
     stock: 20,
+    price: 950,
     img: JMorron,
 },
 {
@@ -55,6 +60,7 @@ export const item = [
     category: "gourmet",
     description: "Muzzarella Vegana, Salsa de Tomate y Berenjena",
     stock: 20,
+    price: 800,
     img: Berenjena,
 },
 {
@@ -63,6 +69,7 @@ export const item = [
     category: "gourmet",
     description: "Muzzarella, Roquefort y Miel",
     stock: 20,
+    price: 900,
     img: RoqueMiel,
 },
 ];
