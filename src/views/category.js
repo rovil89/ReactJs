@@ -4,7 +4,7 @@ import { Layout } from "../components/Layout";
 
 const CategoryView = () => {
 const { category } = useParams();
-  // const categories = item.filter((product) => product.category === category);
+
 
 return (
     <Layout>

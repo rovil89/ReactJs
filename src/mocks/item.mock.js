@@ -7,7 +7,7 @@ import Berenjena from "../assets/img/berenjena.jpeg";
 import RoqueMiel from "../assets/img/roqueMiel.jpeg";
 
 
-export const item =[
+export const item = [
     {
     id:"1",
     name:"Jamon Crudo y Rucula",

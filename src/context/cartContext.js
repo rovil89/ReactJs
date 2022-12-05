@@ -8,18 +8,21 @@ export const CartContextProvider = ({children}) => {
     function addItem(item) {
         setCarrito(carrito.push(item));
     }
+
     function removeItem(itemId){
         setCarrito(carrito.filter((item) => item.id !== itemId));
     }
+
     function clear(){
-        setCarrito ([]);
+        setCarrito = ([]);
     }
+    
     function isInCart(itemId){
         return Boolean(carrito.find((item) => itemId === itemId));
     }
     return (
-        <Context.Provider value={{ state, setState, addItem, removeItem, clear}}>
+        <cartContext.Provider value={{ addItem, removeItem, clear, isInCart}}>
             {children}
-        </Context.Provider>
+        </cartContext.Provider>
     );
 };
