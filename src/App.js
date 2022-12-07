@@ -1,18 +1,18 @@
 import './App.css';
 
-import ItemListContainer from "./components/ItemListContainer";
+import { ItemListContainer } from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import logo from './logo.svg';
 import {Layout} from "./components/Layout";
-import {cartContext} from "./context/cartContext";
+import {CartContext} from "./context/CartContext";
 
 function App() {
   return (
-      <cartContext.Provider value={[]}>
+      <CartContext.Provider value={[]}>
         <Layout >
           <ItemListContainer />
         </Layout>
-      </cartContext.Provider>
+      </CartContext.Provider>
     
   );
 }
