@@ -13,7 +13,7 @@ export const Items = [
     name:"Jamon Crudo y Rucula",
     category: "gourmetconjamon",
     description: "Jamón Crudo, Salsa de Tomate, Muzzarella y Rúcula",
-    stock: 10,
+    stock: 20,
     price: 1000,
     img: Crudo,
 },

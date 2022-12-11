@@ -6,42 +6,54 @@ import { ItemList } from "./ItemList";
 
 // Mock
 import { Items } from "../mocks/items.mock";
+import { collection, getDocs, getFirestore, snapshotEqual} from "firebase/firestore";
 
 export const ItemListContainer = () => {
 const { category } = useParams();
 const [products, setProducts] = useState([]);
 
-useEffect(() => {
-    new Promise((resolve) => {
-      // Reset the state to show the loading spinner
-    setProducts([]);
 
-      // Simulation of a call to an api
-    return setTimeout(() => {
-        resolve(Items);
-    }, 3000);
-    }).then((data) => {
-      // Execute only in the categories views
-    if (category) {
-        const categories = data.filter(
-        (product) => product.category === category
-        );
+useEffect ( ()=> {
+  const db = getFirestore();
+  const itemCollection = collection (db , "items");
+  getDocs(itemCollection).then((snapshot)=>{
+    const products = snapshot.docs.map ((doc) => ({
+      id: doc.id, ...doc.data(),
+    }));
+    setProducts(products);
+  });
+},[]);
+// useEffect(() => {
+//     new Promise((resolve) => {
+//       // Reset the state to show the loading spinner
+//     setProducts([]);
 
-        // Execute only in the home
-        setProducts(categories);
-    } else {
-        setProducts(data);
-    }
-    });
-}, [category]);
+//       // Simulation of a call to an api
+//     return setTimeout(() => {
+//         resolve(Items);
+//     }, 3000);
+//     }).then((data) => {
+//       // Execute only in the categories views
+//     if (category) {
+//         const categories = data.filter(
+//         (product) => product.category === category
+//         );
 
-if (products.length === 0) {
+//         // Execute only in the home
+//         setProducts(categories);
+//     } else {
+//         setProducts(data);
+//     }
+//     });
+// }, [category]);
+
+if (products.lenght === 0) {
     return <p>Loading...</p>;
 }
 
 return (
-    <div className="h-full">
-    <ItemList products={products} />
+    <div className="cardProductContainer">
+      <ItemList products={products} />
     </div>
 );
 };

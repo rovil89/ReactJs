@@ -6,9 +6,10 @@ import { Layout } from "../components/Layout";
 import { TrashWidget } from "../components/TrashWidget";
 import { CartContext } from "../context/CartContext";
 
+
 const CartView = () => {
-const [isLoading, setIsLoading] = useState(false);
-const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
 
 const { productsAdded, clear, totalAmount } = useContext(CartContext);
 
@@ -25,13 +26,13 @@ const handleFinalizePurchase = () => {
 return (
     <Layout>
     <div className="flex flex-col max-w-[50%]">
-        {productsAdded.length === 0 ? (
+        {productsAdded === 0 ? (
         <div className="flex flex-col items-center justify-center">
-            <img src={EmptyCart} alt="Empty Cart" className="w-44 h-44" />
-            <h1 className="text-2xl">No has agregado productos</h1>
+            <img src={EmptyCart} alt="Empty Cart"  />
+            <h1>No has agregado productos</h1>
             <button
             onClick={() => navigate("/")}
-            className="rounded-lg p-2 bg-gray-800 text-white mt-4"
+            className="rounded-lg p-2 bg-blue text-white mt-4"
             >
             Inicio
             </button>
@@ -39,7 +40,7 @@ return (
         ) : (
         <div>
             <div className="flex gap-4">
-            {productsAdded.map((product) => {
+            {productsAdded && productsAdded.map((product) => {
                 const quantityAdded = product.quantityAdded;
 
                 return (
@@ -58,10 +59,10 @@ return (
                 <p>Loading...</p>
             ) : (
                 <div className="flex flex-col">
-                <span>Total a pagar: ${totalAmount}</span>
+                <span className="text-white">Total a pagar: ${totalAmount}</span>
                 <button
                     onClick={handleFinalizePurchase}
-                    className="rounded-lg p-2 bg-gray-800 text-white"
+                    className="rounded-lg p-2 bg-grey text-black"
                 >
                     Finalizar Compra
                 </button>

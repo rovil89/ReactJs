@@ -1,19 +1,11 @@
-.pizza{
-    padding: 10px;
-    height: 25%;
-    width: 30%;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
-}
 img{
     padding: 10px;
     width: 350px;
-    height: 400px;
+    height: 450px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
+
 .nombre{
     display: flex;
     justify-content: center;
@@ -26,10 +18,11 @@ p{
     
 }
 .descripcion{
-    color: antiquewhite;
-    font-weight: 10px;
-    font-size: medium;
+    color: white;
+    font-weight: 20px;
+    font-size: large;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 ul{
@@ -37,20 +30,25 @@ ul{
 }
 body{
     background-image: url(../assets/img/leña\ al\ fuego\ completa.jpg);
-    
     background-attachment: fixed;
 }
 .carrito {
-border: none;
+color: aqua;
 background-color: aqua;
 padding: 5px;
+width: 40px;
+height: 40px;
+
 }
+
 
 .cardProductContainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
+    margin: 10px;
 }
+
 .boton{
     margin: 25px;
     margin-left: 25%;
