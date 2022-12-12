@@ -15,6 +15,7 @@ img{
 }
 p{
     color: white;
+    margin: 0%;
     
 }
 .descripcion{
@@ -24,9 +25,11 @@ p{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 ul{
     list-style-type: none;
+    
 }
 body{
     background-image: url(../assets/img/leña\ al\ fuego\ completa.jpg);
@@ -41,12 +44,16 @@ height: 40px;
 
 }
 
-
+.producto{
+    padding: 0%;
+    margin: 30px;
+}
 .cardProductContainer{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
+    justify-content: center;
     width: 100%;
-    margin: 10px;
+    margin: 0px;
 }
 
 .boton{
@@ -56,6 +63,13 @@ height: 40px;
     justify-content: center;
     align-items: center;
     width: 50%;
+    background-color: aqua;
+    border-radius: 10px;
+    color: black;
+    font-weight: 25px;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 .navbarCont{
     position: sticky;

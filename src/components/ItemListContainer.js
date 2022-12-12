@@ -4,9 +4,8 @@ import { useParams } from "react-router-dom";
 // Own components
 import { ItemList } from "./ItemList";
 
-// Mock
-import { Items } from "../mocks/items.mock";
-import { collection, getDocs, getFirestore, snapshotEqual} from "firebase/firestore";
+//Firebase
+import { collection, getDocs, getFirestore, snapshot} from "firebase/firestore";
 
 export const ItemListContainer = () => {
 const { category } = useParams();

@@ -10,7 +10,7 @@ import RoqueMiel from "../assets/img/roqueMiel.jpeg";
 export const Items = [
     {
     id:"1",
-    name:"Jamon Crudo y Rucula",
+    name:"Jamón Crudo y Rucula",
     category: "gourmetconjamon",
     description: "Jamón Crudo, Salsa de Tomate, Muzzarella y Rúcula",
     stock: 20,
@@ -21,7 +21,7 @@ export const Items = [
     id:"2",
     name:"Provolone",
     category: "gourmet",
-    description: "Queso Provolone, salsa de tomate, oregano, y aceitunas.",
+    description: "Queso Provolone, salsa de tomate, orégano, y aceitunas.",
     stock: 15,
     price: 900,
     img: Provolone,
@@ -47,9 +47,9 @@ export const Items = [
 },
 {
     id:"5",
-    name:"Jamon y Morron",
+    name:"Jamón y Morrón",
     category: "gourmetconjamon",
-    description: "Muzzarella, Jamon Cocido, Salsa de Tomate y Morron",
+    description: "Muzzarella, Jamón Cocido, Salsa de Tomate y Morrón",
     stock: 20,
     price: 950,
     img: JMorron,

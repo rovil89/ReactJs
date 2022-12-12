@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./cards.css";
 
+
 export const Item = ({ product, quantityAdded }) => {
 const navigate = useNavigate();
 
@@ -12,8 +13,8 @@ function handleNavigate() {
 }
 
 return (
-    <div className="cardProductContainer" onClick={handleNavigate}>
-        <div >
+    <div onClick={handleNavigate}>
+        <div className="producto">
             <img  
             src={product.img}
             alt="Product" />
@@ -29,7 +30,7 @@ return (
                 {quantityAdded ? "Agregados" : " En Stock"}:{" "}
                 {quantityAdded || product.stock}
             </span>
-            <button>jsdkajghfjd</button>
+            <button type="button" className="boton btn btn-outline-success">La Necesito</button>
         </div>
         </div>
 );

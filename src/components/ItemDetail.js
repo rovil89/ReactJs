@@ -4,6 +4,7 @@ import { CartContext } from "../context/CartContext";
 import { Item } from "./Item";
 import { ItemCount } from "./ItemCount";
 
+
 const ItemDetail = ({ item }) => {
     const { addItem, isInCart } = useContext(CartContext);
     const navigate = useNavigate();
@@ -29,9 +30,10 @@ function handleCheckout() {
 }
 
 return (
+    
     <div>
         {Item.img}
-    <div className="flex justify-center w-1/2">
+    <div className="flex justify-center ">
         <img className="max-h-[500px]" src={item.img} alt={item.name} />
     </div>
 
