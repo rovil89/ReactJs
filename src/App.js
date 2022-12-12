@@ -4,7 +4,7 @@ import { ItemListContainer } from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import logo from './logo.svg';
 import {Layout} from "./components/Layout";
-import {CartContext} from "./context/CartContext";
+import {CartContext} from "./context/cartContext";
 
 function App() {
   return (

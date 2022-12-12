@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../context/cartContext";
 import { Item } from "./Item";
 import { ItemCount } from "./ItemCount";
 
@@ -42,7 +42,7 @@ return (
         <h2 className="text-3xl font-bold text-gray-800">{item.name}</h2>
         <p className="mt-4 text-xl">{item.description}</p>
         <span className="mt-4 text-xl">
-        Price: <strong className="text-gray-800">${item.price}</strong>
+        Precio: <strong className="text-gray-800">${item.price}</strong>
         </span>
         {currentStock > 0 && (
         <p className="text-sm">En Stock: {currentStock}</p>

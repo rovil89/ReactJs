@@ -4,7 +4,7 @@ import EmptyCart from "../assets/img/empty.png";
 import { Item } from "../components/Item";
 import { Layout } from "../components/Layout";
 import { TrashWidget } from "../components/TrashWidget";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "../context/cartContext";
 
 
 const CartView = () => {
