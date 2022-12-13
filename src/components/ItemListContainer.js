@@ -22,6 +22,8 @@ useEffect ( ()=> {
     setProducts(products);
   });
 },[]);
+
+
 // useEffect(() => {
 //     new Promise((resolve) => {
 //       // Reset the state to show the loading spinner
@@ -47,7 +49,9 @@ useEffect ( ()=> {
 // }, [category]);
 
 if (products.lenght === 0) {
-    return <p>Loading...</p>;
+    return ( <div className="contenedorCarga">
+    <div className="carga"></div>
+    </div>);
 }
 
 return (

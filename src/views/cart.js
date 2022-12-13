@@ -5,6 +5,7 @@ import { Item } from "../components/Item";
 import { Layout } from "../components/Layout";
 import { TrashWidget } from "../components/TrashWidget";
 import { CartContext } from "../context/cartContext";
+import "./cards.css";
 
 
 const CartView = () => {
@@ -28,7 +29,7 @@ return (
     <div className="flex flex-col max-w-[50%]">
         {productsAdded === 0 ? (
         <div className="flex flex-col items-center justify-center">
-            <img src={EmptyCart} alt="Empty Cart"  />
+            <img className="carrito" src={EmptyCart} alt="Empty Cart"  />
             <h1>No has agregado productos</h1>
             <button
             onClick={() => navigate("/")}
@@ -56,7 +57,9 @@ return (
             </div>
             <div className="flex justify-end mt-4">
             {isLoading ? (
-                <p>Loading...</p>
+                ( <div className="contenedorCarga">
+                <div className="carga"></div>
+            </div>)
             ) : (
                 <div className="flex flex-col">
                 <span className="text-white">Total a pagar: ${totalAmount}</span>

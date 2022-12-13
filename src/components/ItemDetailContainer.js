@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useParams } from "react";
 import ItemDetail from "./ItemDetail";
-
 import { Items as itemMock } from "../mocks/items.mock";
 
 const ItemDetailContainer = () => {
@@ -13,7 +12,9 @@ useEffect(() => {
 }, []);
 
 if (!Items) {
-    return <p>Loading...</p>;
+    return (  ( <div className="contenedorCarga">
+    <div className="carga"></div>
+</div>));
 }
 
 return <ItemDetail Items={Items} />;

@@ -36,13 +36,56 @@ body{
     background-attachment: fixed;
 }
 .carrito {
-color: aqua;
-background-color: aqua;
-padding: 5px;
-width: 40px;
-height: 40px;
 
+padding: 0px;
+width: 90px;
+height: 80px;
+border-radius: 70px;
 }
+.contCart{
+    color: aqua;
+    background-color: aqua;
+    padding: 0%;
+    width: 90px; 
+}
+.contenedorCarga {
+    background-image: url(../assets/img/leña\ al\ fuego\ completa.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 1000;
+    top: 0;
+}
+
+.carga {
+    border: 15px solid #ccc;
+    border-top-color: aqua;
+    border-top-style: groove;
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+@keyframes girar {
+    from {transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
 
 .producto{
     padding: 0%;

@@ -9,14 +9,13 @@ const { productsAdded } = useContext(CartContext);
 const count = productsAdded;
 
 return (
-    <div >
+    <div  >
     <Link to="/cart">
-        <button type="button">
-            <img className="carrito" src={EmptyCart} alt="" />
-        </button>
-        {count > 0 && (
-        <span className=" w-4 h-4 bottom-0 -right-2 rounded-full flex justify-center items-center bg-white/70">
-            {count}
+        
+    <img className="carrito" src={EmptyCart}  />
+    {count > 0 && (
+        <span>
+        {count}
         </span>
         )}
     </Link>

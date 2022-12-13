@@ -30,7 +30,7 @@ return (
                 {quantityAdded ? "Agregados" : " En Stock"}:{" "}
                 {quantityAdded || product.stock}
             </span>
-            <button type="button" className="boton btn btn-outline-success">La Necesito</button>
+            <button type="button" className="boton btn btn-outline-success">La Quiero</button>
         </div>
         </div>
 );

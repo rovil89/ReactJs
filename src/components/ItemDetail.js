@@ -9,7 +9,7 @@ const ItemDetail = ({ item }) => {
     const { addItem, isInCart } = useContext(CartContext);
     const navigate = useNavigate();
     const [count, setCount] = useState(1);
-    const [currentStock, setCurrentStock] = useState(item.stock);
+    const [currentStock, setCurrentStock] = useState(item.id);
     const maxQuantity = currentStock;
 
 function handleCount(type) {
