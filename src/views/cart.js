@@ -5,7 +5,7 @@ import { Item } from "../components/Item";
 import { Layout } from "../components/Layout";
 import { TrashWidget } from "../components/TrashWidget";
 import { CartContext } from "../context/cartContext";
-import "./cards.css";
+import "../components/cards.css";
 
 
 const CartView = () => {
