@@ -69,7 +69,7 @@ return (
                     onClick={handleFinalizePurchase}
                     className="btn btn-primary"
                 >
-                    Finalizar Compra
+                    Finalizar Compraaaa
                 </button>
                 <Checkout />
                 </div>

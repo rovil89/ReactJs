@@ -18,15 +18,16 @@ return (
             <img  
             src={product.img}
             alt="Product" />
-            <span className="descripcion ">
+            <span className="descripcionTit ">
                 {product.name.lenght > 20 ? `${title} ...` : product.name}
             </span>
             <p>
             {product.description.lenght > 30
             ? `${description} ...`
             : product.description}</p>
-            <span className="descripcion">${product.price}</span>
-            <span className="descripcion">
+            <span className="descripcionPrecio">${product.price}</span>
+            <hr />
+            <span className="descripcionP">
                 {quantityAdded ? "Agregados" : " En Stock"}:{" "}
                 {quantityAdded || product.stock}
             </span>
