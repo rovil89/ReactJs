@@ -6,6 +6,7 @@ import { Layout } from "../components/Layout";
 import { TrashWidget } from "../components/TrashWidget";
 import { CartContext } from "../context/cartContext";
 import "../components/cards.css";
+import Checkout from "../components/Checkout/checkout";
 
 
 const CartView = () => {
@@ -45,7 +46,7 @@ return (
                 const quantityAdded = product.quantityAdded;
 
                 return (
-                <div className="relative">
+                <div >
                     <Item
                     product={product.item}
                     quantityAdded={quantityAdded}
@@ -61,20 +62,23 @@ return (
                 <div className="carga"></div>
             </div>)
             ) : (
-                <div className="flex flex-col">
-                <span className="text-white">Total a pagar: ${totalAmount}</span>
+                <div className="mb-3 flex">
+                <span className="text-white text-size-large">Total a pagar: ${totalAmount},00</span>
+                <hr />
                 <button
                     onClick={handleFinalizePurchase}
-                    className="rounded-lg p-2 bg-grey text-black"
+                    className="btn btn-primary"
                 >
                     Finalizar Compra
                 </button>
+                <Checkout />
                 </div>
             )}
             </div>
         </div>
         )}
     </div>
+    
     </Layout>
 );
 };

@@ -9,8 +9,10 @@ const ItemDetail = ({ item }) => {
     const { addItem, isInCart } = useContext(CartContext);
     const navigate = useNavigate();
     const [count, setCount] = useState(1);
-    const [currentStock, setCurrentStock] = useState(item.id);
+    const [currentStock, setCurrentStock] = useState(item.stock);
     const maxQuantity = currentStock;
+
+    console.log({item})
 
 function handleCount(type) {
     if (type === "plus" && count < maxQuantity) setCount(count + 1);
@@ -29,46 +31,44 @@ function handleCheckout() {
     navigate("/cart");
 }
 
+console.log({item})
+
 return (
     
     <div>
-        {Item.img}
     <div className="flex justify-center ">
-        <img className="max-h-[500px]" src={item.img} alt={item.name} />
+        <img className="productoDetail" src={item.img} alt={item.name} />
     </div>
-
-        {Item.description}
     <div className="flex flex-col justify-center pl-10">
-        <h2 className="text-3xl font-bold text-gray-800">{item.name}</h2>
-        <p className="mt-4 text-xl">{item.description}</p>
-        <span className="mt-4 text-xl">
-        Precio: <strong className="text-gray-800">${item.price}</strong>
+        <h2 className="descripcionTit text-3xl font-bold ">{item.name}</h2>
+        <p className="descripcion mt-4 text-xl">{item.description}</p>
+        <span className="descripcion mt-4 text-xl">
+        Precio:   <strong className="descripcion"> $ {item.price} ,00</strong>
         </span>
         {currentStock > 0 && (
-        <p className="text-sm">En Stock: {currentStock}</p>
+        <p className="descripcion text-sm">En Stock: {currentStock}</p>
         )}
 
         <div className="flex flex-col flex-1 items-center">
-            {Item.stock}
         {currentStock > 0 ? (
             <ItemCount count={count} handleCount={handleCount} />
         ) : (
-            <span className="text-red-500 mt-10">Sin stock</span>
+            <span className=" text-red-500 mt-10">Sin stock</span>
         )}
         <div className="w-full flex flex-col items-center">
             <button
-            onClick={handleAdd}
-            className="w-4/5 bg-gray-200 px-4 py-2 mt-2 rounded disabled:opacity-40"
-            disabled={currentStock === 0}
+                onClick={handleAdd}
+                type="button" className="boton btn btn-outline-success disabled:opacity-40"
+                disabled={currentStock === 0}
             >
-            Agregar al carrito
+                Agregar al carrito
             </button>
             <button
-            disabled={!isInCart(item.id)}
-            onClick={handleCheckout}
-            className="w-4/5 bg-gray-800 text-white px-4 py-2 mt-2 rounded disabled:opacity-50"
+                disabled={!isInCart(item.id)}
+                onClick={handleCheckout}
+                type="button" className="boton btn btn-outline-success disabled:opacity-50"
             >
-            Finalizar Compra
+                Finalizar Compra
             </button>
         </div>
         </div>

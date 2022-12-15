@@ -1,23 +1,36 @@
-import { useEffect, useState, useParams } from "react";
+import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import { Items as itemMock } from "../mocks/items.mock";
+import { getFirestore, getDoc, doc } from "firebase/firestore"
+import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
-    const [Items, setItems] = useState(null);
+    const [item, setItem] = useState(null);
+    const {id} = useParams()
 
 useEffect(() => {
-    new Promise((resolve) => setTimeout(() => resolve(itemMock[0]), 2000))
-    .then((data) => setItems(data)
-    );
+    const db = getFirestore()
+    const itemRef = doc(db, "items", id)
+    getDoc(itemRef)
+        .then((item) => {
+            // Validamos si el item existe en nuestra base de datos.
+            if (item.exists()) {
+                // Si el item existe, lo guardamos en el estado.
+                setItem({id: item.id, ...item.data()})
+            }
+        }).catch(err => console.error({err}))
 }, []);
 
-if (!Items) {
-    return (  ( <div className="contenedorCarga">
-    <div className="carga"></div>
-</div>));
+
+if (!item) {
+    return ( 
+        <div className="contenedorCarga">
+            <div className="carga"></div>
+        </div>
+    );
 }
 
-return <ItemDetail Items={Items} />;
+return <ItemDetail item={item} />
 };
 
 export default ItemDetailContainer;
