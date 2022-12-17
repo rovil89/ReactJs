@@ -7,6 +7,7 @@ import { TrashWidget } from "../components/TrashWidget";
 import { CartContext } from "../context/cartContext";
 import "../components/cards.css";
 import Checkout from "../components/Checkout/checkout";
+import swal from "sweetalert";
 
 
 const CartView = () => {
@@ -20,7 +21,11 @@ const handleFinalizePurchase = () => {
     setTimeout(() => {
     clear();
     setIsLoading(false);
-    alert("Compra Finalizada");
+    swal({
+        title: "Somos Pacifica", 
+        text: "Compra Finalizada",
+        icon: "success",
+        timer:"2000",});
     navigate("/");
     }, 2000);
 };
@@ -46,7 +51,7 @@ return (
                 const quantityAdded = product.quantityAdded;
 
                 return (
-                <div >
+                <div className="prodEnCart">
                     <Item
                     product={product.item}
                     quantityAdded={quantityAdded}
@@ -63,15 +68,16 @@ return (
             </div>)
             ) : (
                 <div className="mb-3 flex">
-                <span className="text-white text-size-large">Total a pagar: ${totalAmount},00</span>
+                <span className="totalPagar">Total a pagar: ${totalAmount},00</span>
+                <Checkout />
                 <hr />
                 <button
                     onClick={handleFinalizePurchase}
-                    className="btn btn-primary"
+                    className="boton btn btn-primary"
                 >
-                    Finalizar Compraaaa
+                    Finalizar Compra
                 </button>
-                <Checkout />
+                
                 </div>
             )}
             </div>

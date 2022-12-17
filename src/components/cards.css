@@ -73,6 +73,20 @@ border-radius: 70px;
     padding: 0%;
     width: 90px; 
 }
+.productsNumber{
+    height: 20px;
+    width: 20px;
+    border-radius: 999px;
+    top: 0;
+    right: 0;
+    background-color: red;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .contenedorCarga {
     background-image: url(../assets/img/leña\ al\ fuego\ completa.jpg);
     background-attachment: fixed;
@@ -145,7 +159,7 @@ border-radius: 70px;
 }
 .botonEliminar{
     margin: 25px;
-    margin-left: 13%;
+    margin-left: 40%;
     display: flex;
     align-items: center;
     width: 40px;
@@ -169,7 +183,12 @@ border-radius: 70px;
 }
 .form-control{
     width: 50%;
-
+}
+.botonFinCompra{
+    display: flex;
+    justify-content: center;
+    
+    align-content: center;
 }
 /*Itemcount*/
 .countNum{
@@ -186,6 +205,19 @@ border-radius: 70px;
 }
 .contador{
     margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+/*Producto Cart*/
+.prodEnCart{
+    width: 30%;
+    display: flex;
+    flex-wrap:wrap;
+}
+.totalPagar{
+    font-size: xx-large;
+    font-style: italic;
+    color: white;
     display: flex;
     justify-content: center;
 }

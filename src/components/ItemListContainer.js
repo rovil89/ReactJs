@@ -24,30 +24,6 @@ useEffect ( ()=> {
 },[]);
 
 
-// useEffect(() => {
-//     new Promise((resolve) => {
-//       // Reset the state to show the loading spinner
-//     setProducts([]);
-
-//       // Simulation of a call to an api
-//     return setTimeout(() => {
-//         resolve(Items);
-//     }, 3000);
-//     }).then((data) => {
-//       // Execute only in the categories views
-//     if (category) {
-//         const categories = data.filter(
-//         (product) => product.category === category
-//         );
-
-//         // Execute only in the home
-//         setProducts(categories);
-//     } else {
-//         setProducts(data);
-//     }
-//     });
-// }, [category]);
-
 if (products.lenght === 0) {
     return ( <div className="contenedorCarga">
     <div className="carga"></div>
