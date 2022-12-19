@@ -12,14 +12,8 @@ useEffect(() => {
     const db = getFirestore()
     const itemRef = doc(db, "items", id)
     getDoc(itemRef)
-        .then((item) => {
-            // Validamos si el item existe en nuestra base de datos.
-            if (item.exists()) {
-                // Si el item existe, lo guardamos en el estado.
-                setItem({id: item.id, ...item.data()})
-            }
-        }).catch(err => console.error({err}))
-}, []);
+        .then(res => setItem({ id: res.id, ...res.data() }))
+}, [id])
 
 
 if (!item) {
