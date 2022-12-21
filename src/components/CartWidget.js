@@ -6,21 +6,21 @@ import "./cards.css";
 
 
 const CartWidget = () => {
-const { productsAdded } = useContext(CartContext);
-const count = productsAdded;
+const { itemsCounter } = useContext(CartContext);
 
 return (
     <div  >
         <Link to="/cart">
         
             <img className="carrito" src={EmptyCart}  />
-            {count > 0 && (
+            
+            </Link>
+        <div className="productsNumber">{itemsCounter() > 0 && (
             <span>
-                {count}
+                {itemsCounter()}
             </span>
-            )}
-        </Link>
-        <div className="productsNumber"></div>
+        )}</div>
+        
     </div>
 );
 };
