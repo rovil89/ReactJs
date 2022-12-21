@@ -8,11 +8,9 @@ import {CartContext} from "./context/cartContext";
 
 function App() {
   return (
-      <CartContext.Provider value={[]}>
         <Layout >
           <ItemListContainer />
         </Layout>
-      </CartContext.Provider>
     
   );
 }

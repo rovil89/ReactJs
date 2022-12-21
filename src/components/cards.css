@@ -221,3 +221,8 @@ border-radius: 70px;
     display: flex;
     justify-content: center;
 }
+.enCarrito{
+    display: flex;
+    flex-wrap: wrap;
+
+}

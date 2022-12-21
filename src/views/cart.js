@@ -46,7 +46,7 @@ return (
         </div>
         ) : (
         <div>
-            <div className="flex gap-4">
+            <div className="enCarrito flex gap-4">
             {productsAdded && productsAdded.map((product) => {
                 const quantityAdded = product.quantityAdded;
 
